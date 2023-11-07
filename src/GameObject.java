@@ -19,18 +19,25 @@ public class GameObject {
         this.scale = _scale;
     }
 
+    /// Start is called on first frame
     public void Start(PApplet main) {
 
     }
 
+    /// Update is called on every frame
+    /// DO NOT DRAW IN THIS FUNCTION. IT WILL BE OVERWRITTEN.
     public void Update(PApplet main, float deltaTime) {
 
     }
 
+    /// Draw is called on every frame, after Update
+    /// Matrix transform of the camera anchor will already be applied before this function is called.
+    /// Ensure that the matrix is returned to its initial state.
     public void Draw(PApplet main, GameObject cameraAnchor) {
 
     }
 
+    /// Returns the relative matrix of this object.
     public PMatrix2D getMatrix() {
         PMatrix2D mat = new PMatrix2D();
         mat.m00 = (float)Math.cosh(rotation) * scale.x;
