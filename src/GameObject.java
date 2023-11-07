@@ -1,18 +1,23 @@
 import com.sun.istack.internal.NotNull;
-import com.sun.javafx.geom.Vec2f;
 import processing.core.PApplet;
 import processing.core.PMatrix2D;
 
 public class GameObject {
 
     @NotNull
-    public Vec2f position;
+    public Vec2 position;
 
     @NotNull
     public float rotation;
 
     @NotNull
-    public Vec2f scale;
+    public Vec2 scale;
+
+    GameObject(PApplet main, Vec2 _pos, float _rot, Vec2 _scale) {
+        this.position = _pos;
+        this.rotation = _rot;
+        this.scale = _scale;
+    }
 
     public void Start(PApplet main) {
 
