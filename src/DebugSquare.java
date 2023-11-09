@@ -1,7 +1,7 @@
 import processing.core.PApplet;
 
-public class DebugSpinningSquare extends GameObject {
-    DebugSpinningSquare(PApplet main, Vec2 _pos, float _rot, Vec2 _scale) {
+public class DebugSquare extends GameObject {
+    DebugSquare(PApplet main, Vec2 _pos, float _rot, Vec2 _scale) {
         this.position = _pos;
         this.rotation = _rot;
         this.scale = _scale;
@@ -12,13 +12,12 @@ public class DebugSpinningSquare extends GameObject {
     }
 
     public void Update(PApplet main, float deltaTime) {
-        rotation += deltaTime / 10;
-        System.out.println(rotation);
+        //rotation += deltaTime / 10;
     }
 
     public void Draw(PApplet main, GameObject cameraAnchor) {
         main.applyMatrix(this.getMatrix());
         main.fill(255, 0, 0, 255);
-        main.rect(main.displayWidth / 2.0f, main.displayHeight / 2.0f, 50, 50);
+        main.rect(-50, -50, 100, 100);
     }
 }
