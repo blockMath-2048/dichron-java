@@ -13,6 +13,10 @@ public class GameObject {
     @NotNull
     public Vec2 scale;
 
+    GameObject() {
+        this(null, new Vec2(0, 0), 0.0f, new Vec2(1, 1));
+    }
+
     GameObject(PApplet main, Vec2 _pos, float _rot, Vec2 _scale) {
         this.position = _pos;
         this.rotation = _rot;
@@ -32,7 +36,7 @@ public class GameObject {
 
     /// Draw is called on every frame, after Update
     /// Matrix transform of the camera anchor will already be applied before this function is called.
-    /// Ensure that the matrix is returned to its initial state.
+    /// You do not need to ensure that the matrix is returned to its initial state.
     public void Draw(PApplet main, GameObject cameraAnchor) {
 
     }
