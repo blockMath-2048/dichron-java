@@ -61,6 +61,8 @@ public class Main extends PApplet {
             popMatrix();
         }
         resetMatrix();
+        fill(0.0f, 255.0f);
+        text("Rot: " + (int)(camera.rotation * 180 / 3.14159f) + "° (" + ((int)(camera.rotation * 10) / 10.0f) + " rad, factor " + camera.getMatrix().m00 + ")", 0, height - 10);
     }
 
     public void keyEvent(boolean pressed) {
