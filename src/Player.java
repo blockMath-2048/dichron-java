@@ -8,7 +8,7 @@ public class Player extends GameObject {
     }
 
     public void Start(PApplet main) {
-        //this.rotation = 45.0f;
+        //this.rotation = 90.0f;
     }
 
     public void Update(PApplet main, float deltaTime) {

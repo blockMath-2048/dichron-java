@@ -42,6 +42,7 @@ public class GameObject {
     }
 
     /// Returns the relative matrix of this object.
+    @NotNull
     public PMatrix2D getMatrix() {
         PMatrix2D mat = new PMatrix2D();
         mat.m00 = (float)Math.cosh(rotation) * scale.x;

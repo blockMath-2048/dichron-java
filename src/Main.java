@@ -1,3 +1,4 @@
+import com.sun.istack.internal.NotNull;
 import processing.core.PApplet;
 import processing.core.PMatrix2D;
 
@@ -6,8 +7,10 @@ import java.util.ArrayList;
 
 public class Main extends PApplet {
 
+    @NotNull
     public ArrayList<GameObject> gameObjects;
 
+    @NotNull
     public GameObject camera;
 
 
@@ -38,7 +41,6 @@ public class Main extends PApplet {
         }
     }
     public void draw(){
-        background(127.0f);
         float deltaTime = 1 / frameRate;
 
         //camera.rotation = sin(frameCount / 100.0f);
@@ -46,6 +48,7 @@ public class Main extends PApplet {
             o.Update(this, deltaTime);
         }
 
+        background(127.0f);
         PMatrix2D p = new PMatrix2D();
         p.m02 = (width / 2.0f);
         p.m12 = (height / 2.0f);
