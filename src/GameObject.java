@@ -35,6 +35,8 @@ public class GameObject {
     }
 
     /// Draw is called on every frame, after Update
+    /// If this object is intended to be drawn in the world, the first line of this function should be
+    /// main.applyMatrix(this.getMatrix());
     /// Matrix transform of the camera anchor will already be applied before this function is called.
     /// You do not need to ensure that the matrix is returned to its initial state.
     public void Draw(PApplet main, GameObject cameraAnchor) {
